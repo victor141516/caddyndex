@@ -13,7 +13,7 @@ HTML_ELEMENT = """
 
 
 def get_html():
-    text = open('/etc/Caddyfile', 'r').read()
+    text = open('Caddyfile', 'r').read()
 
     urls = []
     for each in text.split('{\n    proxy')[:-1]:
