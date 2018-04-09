@@ -32,4 +32,4 @@ def get_html():
 
 @app.route("/")
 def html():
-    return "Hello World!"
+    return get_html()
