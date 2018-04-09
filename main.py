@@ -27,7 +27,7 @@ def get_html():
     for element in elements:
         inner_html += element
 
-    print(BASE_HTML.format(inner_html))
+    return BASE_HTML.format(inner_html)
 
 
 @app.route("/")
