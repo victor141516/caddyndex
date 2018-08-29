@@ -17,7 +17,9 @@ def get_html():
 
     urls = []
     for each in text.split('{\n    proxy')[:-1]:
-        urls.append(each.split('\n\n')[-1].strip())
+        each_urls = each.split('\n\n')[-1].strip()
+        for url in each_urls.split(','):
+            urls.append(url.strip())
 
     elements = []
     for url in urls:
