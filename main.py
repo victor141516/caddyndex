@@ -16,8 +16,8 @@ def get_html():
     text = open('Caddyfile', 'r').read()
 
     urls = []
-    for each in text.split('{\n    proxy')[:-1]:
-        each_urls = each.split('\n\n')[-1].strip()
+    for each in text.split('\n}\n\n'):
+        each_urls = each.split(' {')[0]
         for url in each_urls.split(','):
             urls.append(url.strip())
 
